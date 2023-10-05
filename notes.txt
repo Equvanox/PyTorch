@@ -1,0 +1,230 @@
+Machine learning is a branch of artificial intelligence (AI) and computer science which focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy.
+Machine learning is an important component of the growing field of data science. Through the use of statistical methods, algorithms are trained to make classifications or predictions, and to uncover key insights in data mining projects. These insights subsequently drive decision making within applications and businesses, ideally impacting key growth metrics.
+Since deep learning and machine learning tend to be used interchangeably, it’s worth noting the nuances between the two. Machine learning, deep learning, and neural networks are all sub-fields of artificial intelligence. However, neural networks is actually a sub-field of machine learning, and deep learning is a sub-field of neural networks.
+The way in which deep learning and machine learning differ is in how each algorithm learns. "Deep" machine learning can use labeled datasets, also known as supervised learning, to inform its algorithm, but it doesn’t necessarily require a labeled dataset. Deep learning can ingest unstructured data in its raw form (e.g., text or images), and it can automatically determine the set of features which distinguish different categories of data from one another. This eliminates some of the human intervention required and enables the use of larger data sets. You can think of deep learning as "scalable machine learning" as Lex Fridman notes in this MIT lecture (link resides outside ibm.com).
+Classical, or "non-deep", machine learning is more dependent on human intervention to learn. Human experts determine the set of features to understand the differences between data inputs, usually requiring more structured data to learn.
+Neural networks, or artificial neural networks (ANNs), are comprised of node layers, containing an input layer, one or more hidden layers, and an output layer. Each node, or artificial neuron, connects to another and has an associated weight and threshold. If the output of any individual node is above the specified threshold value, that node is activated, sending data to the next layer of the network. Otherwise, no data is passed along to the next layer of the network by that node. The “deep” in deep learning is just referring to the number of layers in a neural network. A neural network that consists of more than three layers—which would be inclusive of the input and the output—can be considered a deep learning algorithm or a deep neural network. A neural network that only has three layers is just a basic neural network.
+Deep learning and neural networks are credited with accelerating progress in areas such as computer vision, natural language processing, and speech recognition.5pp55
+
+UC Berkeley (link resides outside ibm.com) breaks out the learning system of a machine learning algorithm into three main parts.
+A Decision Process: In general, machine learning algorithms are used to make a prediction or classification. Based on some input data, which can be labeled or unlabeled, your algorithm will produce an estimate about a pattern in the data.
+An Error Function: An error function evaluates the prediction of the model. If there are known examples, an error function can make a comparison to assess the accuracy of the model.
+A Model Optimization Process: If the model can fit better to the data points in the training set, then weights are adjusted to reduce the discrepancy between the known example and the model estimate. The algorithm will repeat this “evaluate and optimize” process, updating weights autonomously until a threshold of accuracy has been met.  
+
+Machine learning models fall into three primary categories.
+Supervised learning, also known as supervised machine learning, is defined by its use of labeled datasets to train algorithms to classify data or predict outcomes accurately. As input data is fed into the model, the model adjusts its weights until it has been fitted appropriately. This occurs as part of the cross validation process to ensure that the model avoids overfitting or underfitting. Supervised learning helps organizations solve a variety of real-world problems at scale, such as classifying spam in a separate folder from your inbox. Some methods used in supervised learning include neural networks, naïve bayes, linear regression, logistic regression, random forest, and support vector machine (SVM).
+Unsupervised learning, also known as unsupervised machine learning, uses machine learning algorithms to analyze and cluster unlabeled datasets. These algorithms discover hidden patterns or data groupings without the need for human intervention. This method’s ability to discover similarities and differences in information make it ideal for exploratory data analysis, cross-selling strategies, customer segmentation, and image and pattern recognition. It’s also used to reduce the number of features in a model through the process of dimensionality reduction. Principal component analysis (PCA) and singular value decomposition (SVD) are two common approaches for this. Other algorithms used in unsupervised learning include neural networks, k-means clustering, and probabilistic clustering methods.
+Semi-supervised learning offers a happy medium between supervised and unsupervised learning. During training, it uses a smaller labeled data set to guide classification and feature extraction from a larger, unlabeled data set. Semi-supervised learning can solve the problem of not having enough labeled data for a supervised learning algorithm. It also helps if it’s too costly to label enough data. 
+
+Reinforcement machine learning is a machine learning model that is similar to supervised learning, but the algorithm isn’t trained using sample data. This model learns as it goes by using trial and error. A sequence of successful outcomes will be reinforced to develop the best recommendation or policy for a given problem.
+
+Neural networks are a subset of machine learning, and they are at the heart of deep learning algorithms. They are comprised of node layers, containing an input layer, one or more hidden layers, and an output layer. Each node connects to another and has an associated weight and threshold. If the output of any individual node is above the specified threshold value, that node is activated, sending data to the next layer of the network. Otherwise, no data is passed along to the next layer of the network.
+Neural networks simulate the way the human brain works, with a huge number of linked processing nodes. Neural networks are good at recognizing patterns and play an important role in applications including natural language translation, image recognition, speech recognition, and image creation.
+While we primarily focused on feedforward networks in that article, there are various types of neural nets, which are used for different use cases and data types. For example, recurrent neural networks are commonly used for natural language processing and speech recognition whereas convolutional neural networks (ConvNets or CNNs) are more often utilized for classification and computer vision tasks. Prior to CNNs, manual, time-consuming feature extraction methods were used to identify objects in images. However, convolutional neural networks now provide a more scalable approach to image classification and object recognition tasks, leveraging principles from linear algebra, specifically matrix multiplication, to identify patterns within an image. That said, they can be computationally demanding, requiring graphical processing units (GPUs) to train models.
+
+
+
+Terms : 
+    Algorithms
+        Gradient Decent 
+        BackPropogation
+    Types of Problems
+        All Regressions
+        All Classifications
+        All Clustering
+    Context Managers
+        inference_mode
+    Loss/Cost functions
+        Mean Absolute Error(MAE) and Mean Squared Error(MSE) -> for Regression(Linear etc)
+            L1Loss
+        Binary Cross Entropy(BCE)           -> for Binary Classification
+            BCELoss and BCEWithLogitsLoss
+        Cross Entropy                       -> for MultiClass Classification/ Computer Vision
+            CrossEntropyLoss
+    Optimizers
+        Stochastic Gradient Decent(SGD)
+        Adam
+    Neural Networks layers
+        Linear
+        Rectified Linear Unit(ReLU)  -> makes -ve values 0
+        Flatten
+    Neural Networks Activation functions(Non Linearity)
+        Sigmoid -> makes the graph curve
+        Softmax -> splits data into range of 0 to 1 with probability, over dim dimension
+        argmax -> finds the index of largest value in given tensor of dim dimension
+    Predictions
+        Logits -> raw output of any model
+        Prediction probability -> logits passed through some activation function
+        Prediction labels -> concluded value of pred_probs
+    Model Evaluation Methods
+        accuracy
+        precision
+        recall
+        f1 score
+        confusion matrix
+        classification report
+    Datasets
+        Balanced -> when len(X) == len(y)
+        Unbalanced -> when len(X) != len(y)
+    Scikit-learn Toy Datasets
+        make_circles
+        make_blobs
+    torchvision.datasets
+        MNIST
+        FashionMNIST
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Steps for Linear Regression :
+    imports
+    device agnostic code
+    random seeds
+    find the linear regression equation
+    take sample static values for slope and intercept
+    generate sample values for independent variable in any desirable range
+    calculate all the respective values of dependent variable using the, slope intercept and independent variable in equation
+    find the marker to split this data(X -> features and y -> label) into training and testing datasets with ratio as 80:20
+    plot the training and testing data using Matplotlib
+    create a Linear Model, which will duplicate the equation in forward method, takes value of independent variable(X) and generates random values for slope and intercept
+    make object and try parameters
+    select loss function(L1Loss) and optimizer(SGD)
+    create training and testing loop and train the model
+    make predictions and plot them
+    plot loss curves
+    save the model and state_dict
+    
+
+Steps for Binary Classification :
+    imports
+    device agnostic code
+    random seeds
+    Sample data using sklearn library(make_circles())
+    visualize data using pandas library
+    plot chart to visuaize it using Matplotlib library(2d and 3d)
+    convert data from numpy format and dtype to pytorch format and dtype
+    split data into training and testing Datasets using sklearn(train_test_split())
+    visualize the datasets using Matplotlib
+    create a model to train using linear and non linear layers
+    make predictions on raw data
+    select loss function, optimizer and create accuracy function(BCEWithLogitsLoss, SGD)
+    select Non Linear Activation functions(Sigmoid and Round)
+    create training and testing loop
+    make predictions and plot final output
+
+
+Steps for Multiclass Classification :
+    imports
+    device agnostic code
+    random seeds
+    Sample data using sklearn library(make_blobs())
+    visualize data using pandas library
+    plot chart to visuaize it using Matplotlib library(2d and 3d)
+    convert data from numpy format and dtype to pytorch format and dtype
+    split data into training and testing Datasets using sklearn(train_test_split())
+    visualize the datasets using Matplotlib
+    create a model to train using linear and non linear layers
+    make predictions on raw data
+    select loss function, optimizer and create accuracy function(CrossEntropyLoss, SGD)
+    select Non Linear Activation functions(Softmax and argmax)
+    create training and testing loop
+    make predictions and plot final output
+
+
+Steps for Computer Vision Multiclass Classification :
+    imports
+    device agnostic code
+    random seeds
+    Sample Dataset using torchvision.dataset.FashionMNIST() for train and test
+    understand dataset(understand data hierarchy and try attributes)
+    visualize dataset using plt.imshow()
+    split into batches by creating dataloaders for train and test
+    create a Baseline model(Linear) / 
+    create a NonLinear model / 
+    create a ConvNet(CNN) model taking some existing architecture(like CNN explainer website's TinyVGG) as reference
+    create an objects of the models(for CNN find the value of in_features for Linear layer)
+    select loss function(CrossEntropyLoss), Optimizer(SGD)
+    create Accuracy function(an evaluation metric) and timeTracker function using timeit.default_timer
+    create a functionised training and testing loop
+    Non linear activation functions(Softmax and argmax)
+    call loop function for models
+    create a prediction function to return modelname, loss and accuracy || call it for all models
+    compare the predictions of each model to find the best performing model
+    make the prediction on single random data from original test FashionMNIST dataset and plot it
+    make prediction on the entire test_dataloader and plot it(like 20+- at a time)
+    plot loss curves
+    plot another evaluation metric(Confusion Matrix)
+    save the best model and its state dict   
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Steps for Making Region Plotting Method for classification :
+    bring everything to cpu
+    split the features of X and find min,max of each feature
+    using min,max create the equal parts of this range using numpy.linspace
+    make a np.meshgrid using the above range of equal parts
+    make x values based on meshgrid X,Y points and convert to Tensor
+    using x value make logit prediction on model
+    convert logits to pred_probs and pred_labels
+    plot contourf(note - > convert shape of y_pred first)
+    plot scatter and xlim and ylim
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Plotting region graph for classification :
+    def plot_decision_boundary(model: torch.nn.Module, X: torch.Tensor, y: torch.Tensor):
+        """Plots decision boundaries of model predicting on X in comparison to y.
+
+        Source - https://madewithml.com/courses/foundations/neural-networks/ (with modifications)
+        """
+        # Put everything to CPU (works better with NumPy + Matplotlib)
+        model.to("cpu")
+        X, y = X.to("cpu"), y.to("cpu")
+
+        # Setup prediction boundaries and grid
+        x_min, x_max = X[:, 0].min() - 0.1, X[:, 0].max() + 0.1
+        y_min, y_max = X[:, 1].min() - 0.1, X[:, 1].max() + 0.1
+        xx, yy = np.meshgrid(np.linspace(x_min, x_max, 101), np.linspace(y_min, y_max, 101))
+
+        # Make features
+        X_to_pred_on = torch.from_numpy(np.column_stack((xx.ravel(), yy.ravel()))).float()
+
+        # Make predictions
+        model.eval()
+        with torch.inference_mode():
+            y_logits = model(X_to_pred_on)
+
+        # Test for multi-class or binary and adjust logits to prediction labels
+        if len(torch.unique(y)) > 2:
+            y_pred = torch.softmax(y_logits, dim=1).argmax(dim=1)  # mutli-class
+        else:
+            y_pred = torch.round(torch.sigmoid(y_logits))  # binary
+
+        # Reshape preds and plot
+        y_pred = y_pred.reshape(xx.shape).detach().numpy()
+        plt.contourf(xx, yy, y_pred, cmap=plt.cm.RdYlBu, alpha=0.7)
+        plt.scatter(X[:, 0], X[:, 1], c=y, s=40, cmap=plt.cm.RdYlBu)
+        plt.xlim(xx.min(), xx.max())
+        plt.ylim(yy.min(), yy.max())
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculate accuracy (a classification metric)
+def accuracy_fn(y_true, y_pred):
+    """Calculates accuracy between truth labels and predictions.
+
+    Args:
+        y_true (torch.Tensor): Truth labels for predictions.
+        y_pred (torch.Tensor): Predictions to be compared to predictions.
+
+    Returns:
+        [torch.float]: Accuracy value between y_true and y_pred, e.g. 78.45
+    """
+    correct = torch.eq(y_true, y_pred).sum().item()
+    acc = (correct / len(y_pred)) * 100
+    return acc
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3 ways -> 
+    for i in range(_):
+    for X,y in range(_):
+    
+    for i in something:
+    for X,y in dataloader:
+
+    for i, (X,y) in enumerate(dataloader):
