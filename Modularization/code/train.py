@@ -40,7 +40,7 @@ if __name__ == "__main__":
                                                                                       testPath= TEST_PATH,
                                                                                       batch_size= 32,
                                                                                       transform= simple_transformation)
-  X, y = train_dataloader.dataset[40]
+  X, y = next(iter(train_dataloader))
 
   # model and dummy forward pass
   model = model_builder.TinyVGG(inputs=3,
@@ -50,7 +50,7 @@ if __name__ == "__main__":
 
   model.eval()
   with torch.inference_mode():
-    y_logits= model(X.unsqueeze(dim=0).to(device))
+    y_logits= model(X.to(device))
     y_pred = torch.softmax(y_logits, dim=1).argmax(dim=1)
   print(y_pred, y)
 
