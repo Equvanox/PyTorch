@@ -43,4 +43,5 @@ def convert_data_to_datasets(trainPath: str,
                                           batch_size=batch_size,
                                           shuffle=False,
                                           num_workers=1)
+  # print(next(iter(train_dataloader)))
   return train_dataloader, test_dataloader, class_names

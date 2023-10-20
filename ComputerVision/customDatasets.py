@@ -8,17 +8,13 @@ import requests
 import zipfile 
 import random
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
 from torch import nn
 from PIL import Image
-from scipy import interpolate
 from torch.utils.data import dataloader, dataset
 from torchvision import datasets, transforms
 from tqdm.auto import tqdm
-from torchmetrics import ConfusionMatrix
-from mlxtend.plotting import plot_confusion_matrix
 from typing import List, Dict, Tuple
 from timeit import default_timer as timer
 

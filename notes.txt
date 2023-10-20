@@ -45,9 +45,38 @@ Terms :
         Stochastic Gradient Decent(SGD)
         Adam
     Neural Networks layers
-        Linear
-        Rectified Linear Unit(ReLU)  -> makes -ve values 0
+        Sequential
+        Linear(aka fully connected layer)
         Flatten
+        Blocks(for RNNs{Residual Neural Networks})
+            Residual Block -> {wide -> narrow -> wide structure with no. of channels}
+            Inverted Residual Block(MBConv Block) -> {narrow -> wide -> narrow structure}
+            Bottleneck Residual Block
+            Dense Block
+            Non Local Block
+            ResNeXt Block
+        Non Linear Activation Layers
+            Rectified Linear Units(ReLU)  -> makes -ve values 0
+            Sigmoid Linear Units(SiLU aka swish) -> applies sigmoid function to each element
+            Gaussian Error Linear Units(GELU)
+            Sigmoid Activation
+            Tanh Activation
+            Leaky ReLU
+        Types of Normalization
+            Batch Normalization
+                BatchNorm2d
+            Layer Normalization
+            Instance Normalization
+            Local Response Normalization
+            Adaptive Instance Normalization
+            Spectral Normalization
+        Pooling
+            MaxPooling(MaxPool1d, MaxPool2d, MaxPool3d.. etc)
+            MinPooling(MinPool1d, MinPool2d, MinPool3d.. etc)
+            AvgPooling(AdaptiveAvgPool2d.. etc)
+
+
+
     Neural Networks Activation functions(Non Linearity)
         Sigmoid -> makes the graph curve
         Softmax -> splits data into range of 0 to 1 with probability, over dim dimension
