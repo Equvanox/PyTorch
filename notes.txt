@@ -1,3 +1,4 @@
+"""
 Machine learning is a branch of artificial intelligence (AI) and computer science which focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy.
 Machine learning is an important component of the growing field of data science. Through the use of statistical methods, algorithms are trained to make classifications or predictions, and to uncover key insights in data mining projects. These insights subsequently drive decision making within applications and businesses, ideally impacting key growth metrics.
 Since deep learning and machine learning tend to be used interchangeably, it’s worth noting the nuances between the two. Machine learning, deep learning, and neural networks are all sub-fields of artificial intelligence. However, neural networks is actually a sub-field of machine learning, and deep learning is a sub-field of neural networks.
@@ -198,10 +199,10 @@ Steps for Making Region Plotting Method for classification :
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Plotting region graph for classification :
     def plot_decision_boundary(model: torch.nn.Module, X: torch.Tensor, y: torch.Tensor):
-        """Plots decision boundaries of model predicting on X in comparison to y.
+        '''Plots decision boundaries of model predicting on X in comparison to y.
 
         Source - https://madewithml.com/courses/foundations/neural-networks/ (with modifications)
-        """
+        '''
         # Put everything to CPU (works better with NumPy + Matplotlib)
         model.to("cpu")
         X, y = X.to("cpu"), y.to("cpu")
@@ -235,7 +236,7 @@ Plotting region graph for classification :
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Calculate accuracy (a classification metric)
 def accuracy_fn(y_true, y_pred):
-    """Calculates accuracy between truth labels and predictions.
+    '''Calculates accuracy between truth labels and predictions.
 
     Args:
         y_true (torch.Tensor): Truth labels for predictions.
@@ -243,7 +244,7 @@ def accuracy_fn(y_true, y_pred):
 
     Returns:
         [torch.float]: Accuracy value between y_true and y_pred, e.g. 78.45
-    """
+    '''
     correct = torch.eq(y_true, y_pred).sum().item()
     acc = (correct / len(y_pred)) * 100
     return acc
@@ -257,3 +258,4 @@ def accuracy_fn(y_true, y_pred):
     for X,y in dataloader:
 
     for i, (X,y) in enumerate(dataloader):
+"""
