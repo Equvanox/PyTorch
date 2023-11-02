@@ -71,7 +71,7 @@ Terms :
             Local Response Normalization
             Adaptive Instance Normalization
             Spectral Normalization
-        Pooling
+        Pooling (turns pervious layer's output tenson into next layer's input vector, basically reducing the dimensions, tensor to vector. usually is succeeded by Linear(classifier layer in CV))
             MaxPooling(MaxPool1d, MaxPool2d, MaxPool3d.. etc)
             MinPooling(MinPool1d, MinPool2d, MinPool3d.. etc)
             AvgPooling(AdaptiveAvgPool2d.. etc)
