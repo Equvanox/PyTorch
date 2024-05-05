@@ -231,43 +231,43 @@ if __name__ == "__main__":
     dataloaders = {"train_10_dataloader":train_10_dataloader,
                    "train_20_dataloader":train_20_dataloader}
     models = ["effnet_b0", "effnet_b2"]
-    # starter = timer()
-    # for dataloader_name, dataloader in dataloaders.items():
-    #     for model_name in models:
-    #         for epoch in epoch_list:
+    starter = timer()
+    for dataloader_name, dataloader in dataloaders.items():
+        for model_name in models:
+            for epoch in epoch_list:
 
-    #             experiment_num += 1
-    #             print(f"Experiment : {experiment_num}")
-    #             print(f"Dataloader : {dataloader_name}")
-    #             print(f"Model : {model_name}")
-    #             print(f"Epochs : {epoch}_epochs")
+                experiment_num += 1
+                print(f"Experiment : {experiment_num}")
+                print(f"Dataloader : {dataloader_name}")
+                print(f"Model : {model_name}")
+                print(f"Epochs : {epoch}_epochs")
 
-    #             model = creating_model(model_name=model_name,
-    #                                    class_names=class_names,
-    #                                    device=device)
-    #             loss_fn = nn.CrossEntropyLoss()
-    #             optimizer = torch.optim.Adam(params=model.parameters(),
-    #                                          lr=0.001)
-    #             tb_writer = creating_tensorboard_writer(experiment_name=dataloader_name,
-    #                                                     model_name=model_name,
-    #                                                     extra=str(epoch)+"_epochs")
-    #             newFullLoop(epochs=epoch,
-    #                         model=model,
-    #                         train_dataloader=dataloader,
-    #                         test_dataloader=test_10_dataloader,
-    #                         loss_fn=loss_fn,
-    #                         optimizer=optimizer,
-    #                         tb_writer=tb_writer,
-    #                         accuracy=accuracy,
-    #                         device=device)
+                model = creating_model(model_name=model_name,
+                                       class_names=class_names,
+                                       device=device)
+                loss_fn = nn.CrossEntropyLoss()
+                optimizer = torch.optim.Adam(params=model.parameters(),
+                                             lr=0.001)
+                tb_writer = creating_tensorboard_writer(experiment_name=dataloader_name,
+                                                        model_name=model_name,
+                                                        extra=str(epoch)+"_epochs")
+                newFullLoop(epochs=epoch,
+                            model=model,
+                            train_dataloader=dataloader,
+                            test_dataloader=test_10_dataloader,
+                            loss_fn=loss_fn,
+                            optimizer=optimizer,
+                            tb_writer=tb_writer,
+                            accuracy=accuracy,
+                            device=device)
                 
-    #             utils.saving_model(dirPath=r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\Saved_Models\ExperimentTracking",
-    #                                model_name=f"Model-{dataloader_name}-{model_name}-{epoch}_epochs.pt",
-    #                                model=model)
+                utils.saving_model(dirPath=r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\Saved_Models\ExperimentTracking",
+                                   model_name=f"Model-{dataloader_name}-{model_name}-{epoch}_epochs.pt",
+                                   model=model)
 
-    #             print("+"*162+"\n")
-    # ender = timer()
-    # print(f"Time Taken by All the Experimental Trainings {(ender - starter)/60:.2f} mins.")
+                print("+"*162+"\n")
+    ender = timer()
+    print(f"Time Taken by All the Experimental Trainings {(ender - starter)/60:.2f} mins.")
 
     
     ## Choosing the Best Performing Model after Analysing TensorBoard Scalers

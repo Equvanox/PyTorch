@@ -75,9 +75,17 @@ Terms :
             MaxPooling(MaxPool1d, MaxPool2d, MaxPool3d.. etc)
             MinPooling(MinPool1d, MinPool2d, MinPool3d.. etc)
             AvgPooling(AdaptiveAvgPool2d.. etc)
+        Classification Embedding(extra learnable embedding)
+        Patch Embedding
+        Position Embedding
+        MLP(Multi Layered Perceptron) => just a feedforward ANN that generates ouputs based on inputs and can has multiple layers
+        MSA(Multiheaded Self Attention)
+        LN(Layered Norm) -> Normalization at every step(could be layer or block)
+        Residual Connection or Skip Connection
+        Translation Equivariance VS Translation Invariance
 
-
-
+    "Data Augmentation is needed in CNNs to make the more robust due to CNNs being translation invariance"
+    "Locally Linear Embedding (LLE) is a dimensionality reduction technique used in machine learning and data analysis. It focuses on preserving local relationships between data points when mapping high-dimensional data to a lower-dimensional space."
     Neural Networks Activation functions(Non Linearity)
         Sigmoid -> makes the graph curve
         Softmax -> splits data into range of 0 to 1 with probability, over dim dimension
