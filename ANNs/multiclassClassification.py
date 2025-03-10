@@ -169,5 +169,5 @@ plt.legend()
 plt.show()
 
 ## saving model and state_dict()
-torch.save(model, r"D:\VisualStudioCode\Python\ML\pyTorch\Saved_Models\model_v2.pt")
-torch.save(model.state_dict(), r"D:\VisualStudioCode\Python\ML\pyTorch\Saved_Models\model_v2_state_dict.pt")
+torch.save(model, r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\Saved_Models\model_v2.pt")
+torch.save(model.state_dict(), r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\Saved_Models\model_v2_state_dict.pt")

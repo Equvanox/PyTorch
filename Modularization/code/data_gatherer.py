@@ -6,7 +6,7 @@ import zipfile
 from pathlib import Path
 from tqdm.auto import tqdm
 
-Path.root = Path(r"D:\VisualStudioCode\Python\ML\pyTorch\Modularization")
+Path.root = Path(r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\Modularization")
 
 dataPath = Path(Path.root/"data")
 imagePath = Path(dataPath / "images")

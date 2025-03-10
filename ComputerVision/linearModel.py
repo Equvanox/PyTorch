@@ -17,12 +17,12 @@ device="cuda" if torch.cuda.is_available() else "cpu"
 
 
 ## create sample dataset(FashionMNIST)
-train = datasets.FashionMNIST(root=r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\SampleData",
+train = datasets.FashionMNIST(root=r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\SampleData",
                               train=True,
                               transform=transforms.ToTensor(),
                               target_transform=None,
                               download=True)
-test = datasets.FashionMNIST(root=r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\SampleData",
+test = datasets.FashionMNIST(root=r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\SampleData",
                              train=False,
                              transform=transforms.ToTensor(),
                              target_transform=None,
@@ -144,5 +144,5 @@ end_time = timer()
 print(f"Time Taken : {timeTrack(start_time, end_time):.2f} sec")
  
 ## save model and state_dict()
-torch.save(model, r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\Saved_Models\CVLinearModel.pt")
-torch.save(model.state_dict(), r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\Saved_Models\CVLinearModel_state_dict.pt")
+torch.save(model, r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\Saved_Models\CVLinearModel.pt")
+torch.save(model.state_dict(), r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\Saved_Models\CVLinearModel_state_dict.pt")

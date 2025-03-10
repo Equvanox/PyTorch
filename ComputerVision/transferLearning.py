@@ -51,8 +51,8 @@ if __name__ == "__main__":     # necessary for running next(iter()) and enumerat
 
 
     ## Loading already downloaded data
-    trainPath = Path(r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\SampleData\CustomFood101\Images\train")
-    testPath = Path(r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\SampleData\CustomFood101\Images\test")
+    trainPath = Path(r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\SampleData\CustomFood101\Images\train")
+    testPath = Path(r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\SampleData\CustomFood101\Images\test")
 
 
     ## Creating transforms in 2 different ways 

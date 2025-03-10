@@ -75,10 +75,10 @@ if __name__ == "__main__":
 
     ## Fetching 10% and 20% data from mrdbrouke's repo
     trainPath_10, testPath_10 = data_gatherer(dataSource="https://github.com/mrdbourke/pytorch-deep-learning/raw/main/data/pizza_steak_sushi.zip",
-                                            destination=r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\SampleData\CustomFood101\Data_10_percent",
+                                            destination=r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\SampleData\CustomFood101\Data_10_percent",
                                             delete_source=True)
     trainPath_20, testPath_20 = data_gatherer(dataSource="https://github.com/mrdbourke/pytorch-deep-learning/raw/main/data/pizza_steak_sushi_20_percent.zip",
-                                            destination=r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\SampleData\CustomFood101\Data_20_percent",
+                                            destination=r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\SampleData\CustomFood101\Data_20_percent",
                                             delete_source=True)
 
 
@@ -149,12 +149,12 @@ if __name__ == "__main__":
     # torch.utils.tensorboard.writer.SummaryWriter() is a pytorch utility for tensorboard, it's purpose is to track experiment scalers/tensors like loss and accuracy
     # in form of folders and tensorflow events like(events.out.tfevents.1698931560.84bdaa7bbe56.733.0) so it can be easily read by Tensorflow's TensorBoard to show graphs
     # instead of manually tracking loss and acc of every experiment and plotting charts for it, we can use tensorboard, which is much more efficient
-    tb_writer = writer.SummaryWriter(log_dir=r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\runs")  # this type of call will take log_dir parameter as default(/runs/<date>_<time>_<sysCode>) -> (/runs/Nov02_13-26-00_84bdaa7bbe56)
+    tb_writer = writer.SummaryWriter(log_dir=r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\runs")  # this type of call will take log_dir parameter as default(/runs/<date>_<time>_<sysCode>) -> (/runs/Nov02_13-26-00_84bdaa7bbe56)
     def creating_tensorboard_writer(experiment_name: str,
                                     model_name: str,
                                     extra: str=None) -> torch.utils.tensorboard.writer:
         timestamp = datetime.now().strftime("%Y-%m-%d")
-        log_dir = os.path.join(r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\runs",timestamp,experiment_name,model_name,extra) if extra else os.path.join(r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\runs",timestamp,experiment_name,model_name)
+        log_dir = os.path.join(r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\runs",timestamp,experiment_name,model_name,extra) if extra else os.path.join(r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\runs",timestamp,experiment_name,model_name)
         tb_writer = writer.SummaryWriter(log_dir)
         return tb_writer
 
@@ -261,7 +261,7 @@ if __name__ == "__main__":
                             accuracy=accuracy,
                             device=device)
                 
-                utils.saving_model(dirPath=r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\Saved_Models\ExperimentTracking",
+                utils.saving_model(dirPath=r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\Saved_Models\ExperimentTracking",
                                    model_name=f"Model-{dataloader_name}-{model_name}-{epoch}_epochs.pt",
                                    model=model)
 
@@ -277,7 +277,7 @@ if __name__ == "__main__":
 
 
     ## Creating a New instance of _b2 and Loading the best model's state dict on it
-    best_model_path = r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\Saved_Models\ExperimentTracking\Model-train_20_dataloader-effnet_b2-10_epochs.pt"
+    best_model_path = r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\Saved_Models\ExperimentTracking\Model-train_20_dataloader-effnet_b2-10_epochs.pt"
     best_model = creating_model(model_name="effnet_b2",
                                 class_names=class_names)
     best_model.load_state_dict(torch.load(best_model_path).state_dict())
@@ -294,7 +294,7 @@ if __name__ == "__main__":
         
 
     ## Making a prediction on a "out of testing data" image
-    predictions.predict_a_image(path=r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\SampleData\CustomFood101\steak_from_internet.jpg",
+    predictions.predict_a_image(path=r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\SampleData\CustomFood101\steak_from_internet.jpg",
                                 model=best_model,
                                 class_names=class_names,
                                 image_size=(224,224))

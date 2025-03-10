@@ -25,7 +25,7 @@ device= "cuda" if torch.cuda.is_available() else "cpu"
 
 ## Requesting http GET for Git Repo, to fetch smaller Food101 dataset and putting into folders of `Standard Image Classification Format`
 # making base folder in root directory
-dirPath = Path(r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\SampleData\CustomFood101")
+dirPath = Path(r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\SampleData\CustomFood101")
 imagePath = dirPath / "Images"
 if imagePath.is_dir():
     print("Images Folder Already Exists, Moving for Downloading..")

@@ -159,8 +159,8 @@ plt.legend()
 plt.show()               # to display matplotlib charts while running on console
 
 ## Saving Model, Saving state_dict()
-torch.save(model,r"D:\VisualStudioCode\Python\ML\pyTorch\Saved_Models\model_v0.pt")
-torch.save(model.state_dict(),r"D:\VisualStudioCode\Python\ML\pyTorch\Saved_Models\model_v0_state_dict.pt")
+torch.save(model,r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\Saved_Models\model_v0.pt")
+torch.save(model.state_dict(),r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\Saved_Models\model_v0_state_dict.pt")
 
 
 

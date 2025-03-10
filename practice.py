@@ -118,7 +118,7 @@ if __name__ == "__main__":
         plt.show()
 
     #----------------------------------------------------------------------------------------------------
-    images = r"D:\VisualStudioCode\Python\ML\pyTorch\Modularization\data\images"
+    images = r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\Modularization\data\images"
     trainPath, testPath = data_available(images)
 
     manual_transform = transforms.Compose([

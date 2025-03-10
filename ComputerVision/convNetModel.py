@@ -22,11 +22,11 @@ torch.cuda.manual_seed(50)
 device= "cuda" if torch.cuda.is_available() else "cpu"
 
 ## Creating Sample Data(FashionMNIST)
-train = datasets.FashionMNIST(root=r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\SampleData",
+train = datasets.FashionMNIST(root=r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\SampleData",
                               train=True,
                               transform=transforms.ToTensor(),
                               download=False)
-test = datasets.FashionMNIST(root=r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\SampleData",
+test = datasets.FashionMNIST(root=r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\SampleData",
                              train=False,
                              transform=transforms.ToTensor(),
                              download=False)
@@ -330,5 +330,5 @@ plt.show()
 
 
 ## Save Model and state_dict()
-torch.save(model_v3, r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\Saved_Models\CVConvNetModel.pt")
-torch.save(model_v3.state_dict(), r"D:\VisualStudioCode\Python\ML\pyTorch\ComputerVision\Saved_Models\CVConvNetModel_state_dict.pt")
+torch.save(model_v3, r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\Saved_Models\CVConvNetModel.pt")
+torch.save(model_v3.state_dict(), r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ComputerVision\Saved_Models\CVConvNetModel_state_dict.pt")
