@@ -1,5 +1,9 @@
 .dlvenv/
 ComputerVision/SampleData
 Modularization/data
-*.pt
-*.pth
+Segmentation/Instance_Segmentation/maskrcnn_resnet50_fpn_coco-bf2d0c1e.pth
+Segmentation/Instance_Segmentation/yolo11n-seg.pt
+Segmentation/Promptable_Segmentation/sam_vit_b_01ec64.pth
+Segmentation/Promptable_Segmentation/sam2.1_hiera_base_plus.pt
+Segmentation/Semantic_Segmentation/deeplabv3_resnet50_coco-cd0a2569.pth
+Segmentation/Semantic_Segmentation/fcn_resnet50_coco-1167a1af.pth
