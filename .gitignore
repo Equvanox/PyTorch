@@ -1,3 +1,5 @@
 .dlvenv/
 ComputerVision/SampleData
 Modularization/data
+*.pt
+*.pth
