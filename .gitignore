@@ -1,3 +1,5 @@
+__pycache__/
+*.pyc
 .dlvenv/
 ComputerVision/SampleData
 Modularization/data
