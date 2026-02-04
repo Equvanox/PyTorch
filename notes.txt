@@ -37,7 +37,7 @@ Terms :
         inference_mode
     Loss/Cost functions
         Mean Absolute Error(MAE) and Mean Squared Error(MSE) -> for Regression(Linear etc)
-            L1Loss
+            L1Loss, L2loss
         Binary Cross Entropy(BCE)           -> for Binary Classification
             BCELoss and BCEWithLogitsLoss
         Cross Entropy                       -> for MultiClass Classification/ Computer Vision

@@ -173,6 +173,6 @@ plt.show()
 
 
 ## saving model and state_dict
-torch.save(model, r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\Saved_Models\model_v1.pt")
-# model._save_to_state_dict(r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\Saved_Models\model_v1_state_dict.pt")
-torch.save(model.state_dict(), r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\Saved_Models\model_v1_state_dict.pt")
+torch.save(model, r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ANNs\Saved_Models\model_v1.pt")
+# model._save_to_state_dict(r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ANNs\Saved_Models\model_v1_state_dict.pt")
+torch.save(model.state_dict(), r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ANNs\Saved_Models\model_v1_state_dict.pt")

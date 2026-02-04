@@ -17,9 +17,9 @@ slope = 0.9             # m
 intercept = 0.1         # c
 
 ## create dataset within a desired range
-X = torch.arange(100,537,2.7).unsqueeze(dim=1)
+X = torch.arange(100,537,2.7).unsqueeze(dim=1)                              # X is denoted capital bcoz it contain feature/s, and features can also be many in some cases, making the need for a Vector(multi dimensional variable)
 print(f'X {X}')
-y = slope * X + intercept
+y = slope * X + intercept                                                   # y can be denoted as small because in most supervised learning, the labels are only single dimensional
 print(len(y),len(X))
 
 ## lets split the dataset into training and testing by ratio 80:20
@@ -159,8 +159,8 @@ plt.legend()
 plt.show()               # to display matplotlib charts while running on console
 
 ## Saving Model, Saving state_dict()
-torch.save(model,r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\Saved_Models\model_v0.pt")
-torch.save(model.state_dict(),r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\Saved_Models\model_v0_state_dict.pt")
+torch.save(model,r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ANNs\Saved_Models\model_v0.pt")
+torch.save(model.state_dict(),r"D:\VisualStudioCode\Python\AI\DeepLearning\pyTorch\ANNs\Saved_Models\model_v0_state_dict.pt")
 
 
 
