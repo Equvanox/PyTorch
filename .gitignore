@@ -9,3 +9,5 @@ Segmentation/Promptable_Segmentation/sam_vit_b_01ec64.pth
 Segmentation/Promptable_Segmentation/sam2.1_hiera_base_plus.pt
 Segmentation/Semantic_Segmentation/deeplabv3_resnet50_coco-cd0a2569.pth
 Segmentation/Semantic_Segmentation/fcn_resnet50_coco-1167a1af.pth
+Segmentation/Panoptic_Segmentation/detr-r101-panoptic-40021d53.pth
+Segmentation/Panoptic_Segmentation/resnet101-63fe2227.pth
